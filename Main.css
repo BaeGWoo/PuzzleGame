@@ -1,0 +1,124 @@
+body {
+    background-color: bisque;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .left-section {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10%;
+  }
+  
+  .puzzle-image {
+    max-width: 80%; /* 이미지 크기를 80%로 줄임 */
+    max-height: auto;
+    margin-top: -20px; /* 상단 여백 조정 */
+    margin-bottom: 30px;
+  }
+  
+  .center-section {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    margin-top: 10%;
+  }
+  h1{
+    color:brown;
+    font-style:oblique;
+    font-size: 50px;
+    margin-top: 2%;
+    text-align: center;
+    margin-bottom: -3%;
+  }
+/* 기본 버튼 스타일 */
+.custom-button1 {
+    
+    background: url("./Level1.png") no-repeat center center;
+    background-size: contain;  /* 이미지를 버튼 크기에 맞게 조절 */
+  cursor: pointer;
+  width: 200px; /* 버튼의 너비 */
+  height: 100px; /* 버튼의 높이 */
+  
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .custom-button2 {
+    background: url("./Level2.png") no-repeat center center;
+    background-size: contain;  /* 이미지를 버튼 크기에 맞게 조절 */
+  cursor: pointer;
+  width: 200px; /* 버튼의 너비 */
+  height: 100px; /* 버튼의 높이 */
+
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .custom-button3 {
+    background: url("./Level3.png") no-repeat center center;
+    background-size: contain;  /* 이미지를 버튼 크기에 맞게 조절 */
+  cursor: pointer;
+  width: 200px; /* 버튼의 너비 */
+  height: 100px; /* 버튼의 높이 */
+
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* 버튼에 호버 효과 추가 */
+  .custom-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* 버튼을 클릭할 때 효과 추가 */
+  .custom-button:active {
+    background-color: #3e8e41;
+  }
+  
+  .button-image {
+    display: block; /* 이미지를 블록 요소로 변경 */
+    max-width: 80%; /* 버튼 컨테이너의 너비에 맞추기 */
+    margin-top: 12%; /* 이미지와 버튼 사이 간격 조절 */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .Title-image {
+    display: block; /* 이미지를 블록 요소로 변경 */
+    max-width: 50%; /* 버튼 컨테이너의 너비에 맞추기 */
+    margin-top: 0%; /* 이미지와 버튼 사이 간격 조절 */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+  }

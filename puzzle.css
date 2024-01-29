@@ -1,0 +1,215 @@
+body {
+    background-color: bisque;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .left-section {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+
+    flex-direction: column; /* 세로로 정렬 */
+    display: flex; /* Add this to make center-section a flex container */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .puzzle-image {
+    display: block; /* 이미지를 블록 요소로 변경 */
+    max-width: 80%; /* 이미지 크기를 80%로 줄임 */
+    max-height: auto;
+    margin-top: -20px; /* 상단 여백 조정 */
+    margin-bottom: 10px;
+  }
+  
+  .center-section {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+
+    flex-direction: column; /* 세로로 정렬 */
+    display: flex; /* Add this to make center-section a flex container */
+    justify-content: center;
+    align-items: center;
+    
+}
+  
+
+/* Adjust the container to maintain aspect ratio */
+
+.container {
+    display: flex;
+    height: 100vh;
+    
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* 가로로 정렬 */
+    align-items: center;
+   margin-top: -10%;
+}
+.button-image {
+    display: inline-block; /* 또는 inline 속성 사용 */
+    max-width: 80%; /* 버튼 컨테이너의 너비에 맞추기 */
+    margin-top: 15%; /* 이미지와 버튼 사이 간격 조절 */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+#board {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+    width: 70%; /* 오른쪽 영역의 너비 조정 */
+    height: 85%;
+    background-color: brown;
+    aspect-ratio: 1;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.board-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    max-width: 100%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    height: 100%;
+    overflow: hidden;
+    aspect-ratio: 1;
+}
+
+.board-container img {
+    max-width: 100%;
+    max-height: 100%;
+    border: 1px solid whitesmoke;
+}
+
+#board h1 {
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.turns-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+}
+.turns-image {
+  max-width: 100px; /* 이미지에 맞게 조정 */
+  /* 추가적인 이미지 스타일 조정 */
+}
+.turns-text {
+  font-size: 100%;
+  text-align: center;
+  font-family: 'Arial', sans-serif; /* 원하는 글꼴로 변경 */
+  font-weight: bold; /* 굵게 스타일링 */
+  position: absolute; /* 텍스트를 절대 위치로 배치 */
+  top: 67%; /* 텍스트를 이미지 상단 중앙에 배치 */
+  left: 50%; /* 가운데 정렬 */
+  transform: translate(-50%, -50%); /* 가운데 정렬 조정 */
+}
+
+.image-container {
+  position: relative; /* 컨테이너를 상대 위치로 설정 */
+}
+/*Craete Puzzle*/
+.button {
+  padding: 1em 1.5em;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: "Helvetica", "Arial", sans-serif;
+  border-radius: 4px;
+  cursor: pointer;
+  appearance: none;
+  border: none;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.button-first {
+  background: linear-gradient(to right, #e55d87, #5fc3e4);
+  box-shadow: 0 2px 25px rgba(229, 93, 135, 0.5);
+}
+
+.button-first:active {
+  background: linear-gradient(
+    to right,
+    rgba(229, 93, 135, 0.9),
+    rgba(95, 195, 228, 0.9)
+  );
+}
+
+.button-second {
+  background: linear-gradient(to right, #1488cc, #2b32b2);
+  box-shadow: 0 2px 25px rgba(20, 137, 204, 0.5);
+}
+
+.button-second:active {
+  background: linear-gradient(
+    to right,
+    rgba(20, 136, 204, 0.9),
+    rgba(43, 50, 178, 0.9)
+  );
+}
+
+.button:focus {
+  outline: none;
+}
+
+particle {
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  position: fixed;
+  opacity: 0;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 4px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+}

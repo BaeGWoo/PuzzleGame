@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Main Page</title>
+  <link rel="stylesheet" href="Main.css">
+</head>
+<body>
+   
+    <div class="container">
+        <div class="left-section">
+          <img class="puzzle-image" src="Original.png" alt="원본 퍼즐 이미지">
+        </div>
+
+        
+        <div class="center-section">
+            <img class="Title-image" src="Title.png" alt="버튼 이미지">
+          <button onclick="openPuzzlePage(1)" class="custom-button1"></button>
+          <button onclick="openPuzzlePage(2)" class="custom-button2"></button>
+          <button onclick="openPuzzlePage(3)" class="custom-button3"></button>
+          <img class="button-image" src="info.png" alt="버튼 이미지">
+        </div>
+      </div>
+  <script>
+    function openPuzzlePage(level) {
+      // 해당 레벨의 퍼즐 페이지를 열기 위해 새 창을 엽니다.
+      window.open(`Puzzle.html?level=${level}`, '_blank');
+    }
+  </script>
+</body>
+</html>
